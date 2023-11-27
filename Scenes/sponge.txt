@@ -1,0 +1,341 @@
+/////////////////////////////////////////
+// Sixth version of the scene file format
+// 
+// - It allows you to add comments like this one
+// - Syntax itself is hopefully self explanatory
+// - Name of the objects and attributes are defined inside the executable
+
+///////////////////////////////////////
+//    Global scene and viewpoint     //
+/////////////////////////////////////// 
+
+Scene 
+{
+	// make sure the version and the executable match !
+	Version.Major = 1;
+	Version.Minor = 5;
+
+	//Camera.Position = -120.0, -25.0, -230.0;
+	Camera.Position = -240.0, -10.0, -460.0;
+	Camera.Rotation = 29.0;
+	Camera.FieldOfView = 37.5;
+
+	// Image Exposure
+	Exposure = -2.5;
+	
+	Skybox.Material.Id = 4;
+
+	// Count the objects in the scene
+	NumberOfMaterials = 5;
+	NumberOfObjects = 222;
+	NumberOfLights = 3; 
+}
+
+///////////////////////////////////////
+//         List of materials         //
+/////////////////////////////////////// 
+
+Material0
+{
+	Type = checkerboard;
+	Size = 100;
+	Diffuse = 0.0, 0.9, 0.0;
+	Diffuse2 = 0.0, 0.7, 0.0;
+	//Specular = 1.2, 1.2, 1.2;  
+	//Power = 60;
+	//Reflection = 0.05;
+}
+Material1
+{
+	Type = gouraud;
+	//Reflection = 0.75;
+	Diffuse = 1, 1, 1;
+	Specular = 1.2, 1.2, 1.2;  
+	Power = 60;
+}
+Material2
+{
+	Type = gouraud;
+	//Reflection = 0.5;
+	Diffuse = 0.25, 0.25, 0.25;
+	Specular = 1.2, 1.2, 1.2;  
+	Power = 60;
+}
+Material3
+{
+	Type = gouraud;
+	Diffuse = 0.0, 0.0, 0.5;
+}
+Material4
+{
+	Type = gouraud;
+	Diffuse = 0.0, 0.0, 0.0;
+}
+
+
+///////////////////////////////////////
+//         List of lights            //
+/////////////////////////////////////// 
+
+Light0
+{
+  Position = -50, 50.0, -1100.0;
+  Intensity = 0.1, 0.1, 0.1;
+}
+Light1
+{
+  Position = -1000.0, 600.0, 0.0;
+  Intensity = 1, 0.25, 0.25;
+}
+Light2
+{
+  Position = 0.0, 0.0, 0.0;
+  Intensity = 0.5, 0.55, 0.;
+}
+
+
+///////////////////////////////////////
+//         List of objects          //
+/////////////////////////////////////// 
+
+Object0
+{
+	Type = Plane;
+	Center = 0.0, -100, 0.0;
+	Normal = 0.0, 1.0, 0.0;
+	Material.Id = 0;
+}
+
+Object222
+{
+	Type = Plane;
+	Center = 0.0, 1000, 0.0;
+	Normal = 0.0, -1.0, 0.0;
+	Material.Id = 4;
+}
+
+
+Object1 { Type = Box; Center = 0.000000, 0.000000, 0.000000; HalfSize = 100.000000, 100.000000, 100.000000; Material.Id = 1; }
+Object2 { Type = Sphere; Material.Id = 2; Operator = Subtraction; Center = -205.000000, 70.000000, -100.000000; Size = 170.0; }
+
+Object3 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 0.000000; HalfSize = 33.333332, 33.333332, 110.000000; }
+//Object4 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 0.000000; HalfSize = 110.000000, 33.333332, 33.333332; }
+//Object5 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 0.000000; HalfSize = 33.333332, 110.000000, 33.333332; }
+Object4 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, -66.666664, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object5 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object6 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, -66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object7 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object8 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object9 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object10 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object11 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, -66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object12 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object13 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object14 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, -22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object15 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object16 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object17 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, -22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object18 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object19 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, -22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object20 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object21 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object22 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 66.666664, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object23 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object24 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object25 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object26 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object27 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object28 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object29 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object30 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object31 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object32 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object33 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, -66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object34 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object35 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object36 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object37 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object38 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, -66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object39 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object40 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object41 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object42 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object43 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object44 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object45 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object46 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object47 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object48 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object49 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, -66.666664, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object50 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object51 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, -66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object52 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object53 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object54 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object55 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, -88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object56 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, -66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object57 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, -44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object58 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object59 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, -22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object60 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object61 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object62 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, -22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object63 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object64 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, -22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object65 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object66 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 22.222221, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object67 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 66.666664, 0.000000; HalfSize = 11.111111, 11.111111, 110.000000; }
+Object68 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object69 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object70 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object71 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object72 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object73 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 44.444443, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object74 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 66.666664, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object75 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 88.888885, 0.000000; HalfSize = 3.703704, 3.703704, 110.000000; }
+Object76 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 0.000000; HalfSize = 110.000000, 33.333332, 33.333332; }
+Object77 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, -66.666664; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object78 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object79 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object80 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object81 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, -66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object82 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, -66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object83 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object84 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object85 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object86 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, -66.666664; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object87 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -22.222221, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object88 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object89 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 22.222221, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object90 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -22.222221, -66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object91 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 22.222221, -66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object92 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -22.222221, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object93 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object94 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 22.222221, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object95 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, -66.666664; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object96 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object97 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object98 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, -88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object99 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, -66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object100 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, -66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object101 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object102 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object103 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, -44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object104 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, 0.000000; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object105 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, -22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object106 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, -22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object107 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, -22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object108 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, 0.000000; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object109 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, 0.000000; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object110 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, 22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object111 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, 22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object112 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, 22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object113 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, 0.000000; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object114 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, -22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object115 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, -22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object116 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, -22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object117 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, 0.000000; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object118 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, 0.000000; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object119 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, 22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object120 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, 22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object121 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, 22.222221; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object122 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, 66.666664; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object123 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object124 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object125 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object126 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, 66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object127 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, 66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object128 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -88.888885, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object129 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -66.666664, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object130 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -44.444443, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object131 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 66.666664; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object132 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -22.222221, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object133 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object134 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 22.222221, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object135 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -22.222221, 66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object136 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 22.222221, 66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object137 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, -22.222221, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object138 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object139 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 22.222221, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object140 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, 66.666664; HalfSize = 110.000000, 11.111111, 11.111111; }
+Object141 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object142 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object143 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, 44.444443; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object144 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, 66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object145 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, 66.666664; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object146 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 44.444443, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object147 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 66.666664, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object148 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 88.888885, 88.888885; HalfSize = 110.000000, 3.703704, 3.703704; }
+Object149 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 0.000000; HalfSize = 33.333332, 110.000000, 33.333332; }
+Object150 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, -66.666664; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object151 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object152 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, -66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object153 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object154 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object155 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object156 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object157 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, -66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object158 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object159 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, 0.000000; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object160 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, -22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object161 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, 0.000000; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object162 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, 22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object163 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, -22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object164 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, 22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object165 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, -22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object166 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, 0.000000; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object167 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, 22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object168 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, 66.666664; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object169 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object170 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, 66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object171 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -88.888885, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object172 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object173 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -66.666664, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object174 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object175 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, 66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object176 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -44.444443, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object177 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, -66.666664; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object178 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object179 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 0.000000, -66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object180 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object181 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object182 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object183 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object184 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 0.000000, -66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object185 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object186 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 66.666664; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object187 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object188 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 0.000000, 66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object189 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = -22.222221, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object190 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object191 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 0.000000, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object192 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object193 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 0.000000, 66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object194 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 22.222221, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object195 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, -66.666664; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object196 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object197 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, -66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object198 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object199 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object200 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object201 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, -88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object202 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, -66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object203 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, -44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object204 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, 0.000000; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object205 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, -22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object206 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, 0.000000; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object207 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, 22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object208 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, -22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object209 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, 22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object210 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, -22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object211 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, 0.000000; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object212 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, 22.222221; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object213 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, 66.666664; HalfSize = 11.111111, 110.000000, 11.111111; }
+Object214 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object215 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, 66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object216 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 44.444443, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object217 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object218 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 66.666664, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object219 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, 44.444443; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object220 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, 66.666664; HalfSize = 3.703704, 110.000000, 3.703704; }
+Object221 { Type = Box; Material.Id = 1; Operator = Subtraction; Center = 88.888885, 0.000000, 88.888885; HalfSize = 3.703704, 110.000000, 3.703704; }
